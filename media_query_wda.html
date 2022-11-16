@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>media_query_wda</title>
+    <link
+      rel="stylesheet"
+      href="https://meyerweb.com/eric/tools/css/reset/reset200802.css"
+    />
+    <style>
+      *,
+      :hover,
+      ::before,
+      ::after {
+        box-sizing: border-box;
+        font-family: '微軟正黑體';
+      }
+      body {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+      .content {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border-bottom: 1px solid #aaa;
+        line-height: 1.5;
+        padding: 15px;
+      }
+      #main {
+        align-items: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 85%;
+        align-self: center;
+        margin: 15px 0;
+      }
+
+      @media (min-width: 1919px) {
+        body {
+          height: 100vh;
+          overflow: hidden;
+        }
+
+        .content {
+          position: absolute;
+          width: 12vw;
+          border-bottom: none;
+          align-items: center;
+          line-height: 1;
+        }
+
+        img {
+          margin: 0;
+          width: 95%;
+        }
+        .content p {
+          display: none;
+        }
+        #main {
+          width: 20vw;
+          top: 25vh;
+          line-height: 1.5;
+          font-size: 0.8rem;
+        }
+        #main h2 {
+          font-size: 1.2rem;
+        }
+        #main p {
+          display: block;
+        }
+
+        .content:nth-child(2) {
+          top: 10vh;
+          left: 3vw;
+        }
+        .content:nth-child(2)::after {
+          content: '';
+          height: 2px;
+          width: 44vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 24vh;
+          left: 19vh;
+          transform: rotate(15deg);
+        }
+
+        .content:nth-child(3) {
+          top: 0vh;
+          left: 22vw;
+        }
+        .content:nth-child(3)::after {
+          content: '';
+          height: 2px;
+          width: 19vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 26vh;
+          left: 18vh;
+          transform: rotate(32deg);
+        }
+
+        .content:nth-child(4) {
+          top: 45vh;
+          left: 5vw;
+        }
+        .content:nth-child(4)::after {
+          content: '';
+          height: 2px;
+          width: 41vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 9vh;
+          left: 21vh;
+          transform: rotate(-15deg);
+        }
+
+        .content:nth-child(5) {
+          top: 63vh;
+          left: 20vw;
+        }
+        .content:nth-child(5)::after {
+          content: '';
+          height: 2px;
+          width: 20vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 1vh;
+          left: 19vh;
+          transform: rotate(-35deg);
+        }
+
+        .content:nth-child(6) {
+          top: 5vh;
+          left: 65vw;
+        }
+        .content:nth-child(6)::after {
+          content: '';
+          height: 2px;
+          width: 16vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 20vh;
+          left: -13vh;
+          transform: rotate(-26deg);
+        }
+
+        .content:nth-child(7) {
+          top: 35vh;
+          left: 80vw;
+        }
+        .content:nth-child(7)::after {
+          content: '';
+          height: 2px;
+          width: 32vh;
+          background-color: #ccc;
+          position: absolute;
+          top: 10vh;
+          left: -34vh;
+          transform: rotate(0);
+        }
+
+        .content:nth-child(8) {
+          top: 70vh;
+          left: 70vw;
+        }
+        .content:nth-child(8)::after {
+          content: '';
+          height: 2px;
+          width: 21vh;
+          background-color: #ccc;
+          position: absolute;
+          top: -7vh;
+          left: -20vh;
+          transform: rotate(39deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content" id="main">
+      <img src="./imgs/logo.png" />
+      <h1>泰山職訓局</h1>
+      <h2>從零開始的網頁設計課程</h2>
+      <p>轉職網頁開發人員　掌握就業必備職能</p>
+      <p>由淺入深學習技術　強化職場的競爭力</p>
+    </div>
+    <div class="content">
+      <img src="./imgs/html.png" />
+      <h2>Html</h2>
+      <p>
+        超文本標記語言（英語：HyperText Markup
+        Language，簡稱：HTML）是一種用於建立網頁的標準標記語言。HTML
+        是一種基礎技術，常與 CSS、JavaScript
+        一起被眾多網站用於設計賞心悅目的網頁、網頁應用程式以及行
+        動應用程式的使用者介面。網頁瀏覽器可以讀取 HTML
+        檔案，並將其彩現成視覺化網頁。HTML
+        描述了一個網站的結構語意隨著線索的呈現，使之成為一種標記語言而非程式語言。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/css.png" />
+      <h2>CSS</h2>
+      <p>
+        層疊樣式表（英語：Cascading Style
+        Sheets，簡寫CSS），又稱串樣式列表、級聯樣式表、串接樣式表、階層式樣式表，一種用來為結構化文件（如
+        HTML 文件或 XML 應用）添加樣式（字型、間距和顏色等）的電腦語言，由W3C
+        定義和維護。目前最新版本是 CSS2.1，為 W3C 的推薦標準。CSS3
+        現在已被大部分現代瀏覽器支援，而下一版的 CSS4 仍在開發中。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/js.png" />
+      <h2>JavaScript</h2>
+      <p>
+        JavaScript，通常縮寫為 JS，是一種進階直譯語言的程式語言。JavaScript
+        是一門基於原型、函式先行的語言，是
+        一門多範式的語言，它支援物件導向編程，指令式程式設計，以及函式語言程式設計。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/jq.jpg" />
+      <h2>jQuery</h2>
+      <p>
+        jQuery 是一套跨瀏覽器的 JavaScript 函式庫，簡化 HTML 與 JavaScript
+        之間的操作。全球前 10,000 個存取最高的 網站中，有 65%
+        使用了jQuery，是目前最受歡迎的 JavaScript 函式庫。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/bs.png" />
+      <h2>Bootstrap</h2>
+      <p>
+        Bootstrap
+        是一組用於網站和網路應用程式開發的開源前端（所謂「前端」，指的是展現給終端使用者的介面。與
+        之對應的「後端」是在伺服器上面執行的程式碼）框架，包括
+        HTML、CSS及JavaScript 的框架，提供字體排印、
+        表單、按鈕、導航及其他各種元件及 Javascript 擴充套件，旨在使動態網頁和
+        Web 應用的開發更加容易。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/SASS.png" />
+      <h2>Sass</h2>
+      <p>
+        SASS 是採用 Ruby 語言編寫的一款 CSS
+        預處理語言，誕生於2007年。最初是為了配合 HAML（一種縮進式 HTML
+        預編譯器）而設計的，因此有著和 HTML 一樣的縮進式風格，以 “.sass”
+        後綴為擴展名。
+      </p>
+    </div>
+    <div class="content">
+      <img src="./imgs/VUE.png" />
+      <h2>Vue.js</h2>
+      <p>
+        Vue 是一個新穎的Javascript 框架，它提供了很多有用的功能來達到漸進增強（
+        progressive enhancement ）的策略。 與其他的框架不同的是，你可以把Vue
+        和既有的HTML 做整合，這讓你可以像使用插入性替換的函式庫一樣來使用Vue
+        ，就像使用JQuery 一樣。
+      </p>
+    </div>
+  </body>
+</html>
